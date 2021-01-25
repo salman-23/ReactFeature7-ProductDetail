@@ -14,16 +14,17 @@ const ProductList = (props) => {
     .filter((product) => product.name.includes(query))
     .map((product) => (
       <ProductItem
-        product={props.product}
+        product={product}
         key={product.id}
-        setProduct={setProduct}
-      ></ProductItem>
+        setProduct={props.setProduct}
+      />
     ));
+
   return (
-    <>
+    <ProductItem>
       <SearchBar setQuery={setQuery} />
       <ListWrapper>{productList}</ListWrapper>
-    </>
+    </ProductItem>
   );
 };
 
