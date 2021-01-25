@@ -76,3 +76,11 @@ export const ThemeButton = styled.button`
 export const Title = styled.h1`
   text-align: center;
 `;
+
+export const ProductName = styled.h1`
+  text-align: center;
+`;
+
+export const ProductImage = styled.h1`
+  text-align: center;
+`;
