@@ -84,3 +84,21 @@ export const ProductName = styled.h1`
 export const ProductImage = styled.h1`
   text-align: center;
 `;
+
+export const BackButton = styled.button`
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  margin-left: 10px;
+  border-radius: 10rem;
+  color: #000;
+  background-color: #00af91;
+`;
+
+export const DeleteButtonB = styled.button`
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  margin-left: 10px;
+  border-radius: 10rem;
+  color: #000;
+  background-color: #c70039;
+`;

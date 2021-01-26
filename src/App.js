@@ -31,27 +31,32 @@ function App() {
     setCurrentTheme(currentTheme === "light" ? "dark" : "light");
 
   const [product, setProduct] = useState(null);
+  const [_products, setProducts] = useState(products);
 
   //Delete
-  const deleteItem = products.filter((product) => {
-    product.id !== id;
-
-    setProduct(deleteItem);
-  });
+  const deleteProduct = (id) => {
+    const filtedItems = _products.filter((product) => product.id !== id);
+    setProducts(filtedItems);
+  };
 
   const setView = () => {
-    product ? (
-      <ProductDetail
-        product={product}
-        setProduct={setProduct}
-        setProduct={deleteItem}
-      />
-    ) : (
-      <ProductList
-        setProduct={setProduct}
-        setProduct={deleteItem}
-      ></ProductList>
-    );
+    if (product) {
+      return (
+        <ProductDetail
+          product={product}
+          setProduct={setProduct}
+          deleteProduct={deleteProduct}
+        />
+      );
+    } else {
+      return (
+        <ProductList
+          setProduct={setProduct}
+          products={_products}
+          deleteProduct={deleteProduct}
+        />
+      );
+    }
   };
 
   return (

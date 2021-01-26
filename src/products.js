@@ -24,3 +24,5 @@ const products = [
     description: "The third best selling items",
   },
 ];
+
+export default products;
